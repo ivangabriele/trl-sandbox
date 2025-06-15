@@ -1072,6 +1072,20 @@ wheels = [
 ]
 
 [[package]]
+name = "trl"
+version = "0.18.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "accelerate" },
+    { name = "datasets" },
+    { name = "transformers" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ce/c3/f55ecb8c64f9ec2b4ae9006e090727946a6acd76d00998dfbb0f424e0d75/trl-0.18.2.tar.gz", hash = "sha256:dae08ed28ca7d9228e07f37cd4a5eec4071ca4e794fffe847ebfc269b78060de", size = 383357, upload-time = "2025-06-15T13:20:41.675Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/04/57/f1cf3cf20fa78a3dcd6c7cc95e9f635bdf4fe12f00894d648b0cb5e42e54/trl-0.18.2-py3-none-any.whl", hash = "sha256:6ed81faf877904e3ec0bd7a4e478837b1b93c901c53e168508799edde8cc33fa", size = 366449, upload-time = "2025-06-15T13:20:06.414Z" },
+]
+
+[[package]]
 name = "trl-example"
 version = "0.0.0"
 source = { virtual = "." }
@@ -1083,6 +1097,7 @@ dependencies = [
     { name = "peft" },
     { name = "torch" },
     { name = "transformers" },
+    { name = "trl" },
 ]
 
 [package.metadata]
@@ -1094,6 +1109,7 @@ requires-dist = [
     { name = "peft", specifier = ">=0.15.2" },
     { name = "torch", specifier = ">=2.7.1" },
     { name = "transformers", specifier = ">=4.52.4" },
+    { name = "trl", specifier = ">=0.18.2" },
 ]
 
 [[package]]
