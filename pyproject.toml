@@ -1,17 +1,23 @@
 [project]
 name = "trl-example"
 version = "0.0.0"
-requires-python = ">=3.13"
+requires-python = "==3.12.*"
 
 dependencies = [
-  "accelerate>=1.7.0",
+  # https://github.com/huggingface/trl/issues/2377#issuecomment-2503234915
+  # "accelerate>=1.7.0",
+  "accelerate==0.34.2",
   "datasets>=3.6.0",
   "deepspeed>=0.17.1",
   "huggingface[cli]>=0.0.1",
   "peft>=0.15.2",
-  "torch>=2.7.1",
-  "transformers>=4.52.4",
-  "trl>=0.18.2",
+  # https://github.com/huggingface/trl/issues/2377#issuecomment-2503234915
+  # "torch>=2.7.1",
+  "torch==2.4.*",
+  # https://github.com/huggingface/trl/issues/2377#issuecomment-2503234915
+  # "transformers>=4.52.4",
+  "transformers==4.50.*",
+  "trl==0.18.*",
 ]
 
 [tool.ruff]
