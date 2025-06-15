@@ -32,7 +32,7 @@ test_examples:
 
 activate:
 	@echo "Activating Python virtual environment..."
-	. .venv/bin/activate
+	source .venv/bin/activate
 
 run_rm_1:
 	python examples/scripts/reward_modeling.py \

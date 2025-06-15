@@ -14,8 +14,7 @@ RUN apt-get install -y \
   procps \
   nano \
   vim \
-  wget \
-  zsh
+  wget
 RUN rm -fr /var/lib/apt/lists/*
 
 RUN useradd -m -u 1000 user
@@ -36,7 +35,8 @@ RUN ls -la /app
 
 ENV UV_NO_CACHE="1"
 RUN uv sync
-RUN . .venv/bin/activate
+
+SHELL ["/usr/bin/bash", "-c"]
 
 # `7860` is the default port for Hugging Face Spaces running on Docker
 # https://huggingface.co/docs/hub/en/spaces-config-reference
