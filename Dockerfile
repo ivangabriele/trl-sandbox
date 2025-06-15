@@ -15,6 +15,9 @@ RUN apt-get install -y \
   wget
 RUN rm -fr /var/lib/apt/lists/*
 
+RUN wget https://developer.download.nvidia.com/compute/cuda/12.9.1/local_installers/cuda_12.9.1_575.57.08_linux.run
+RUN sh cuda_12.9.1_575.57.08_linux.run
+
 RUN useradd -m -u 1000 user
 
 WORKDIR /app
@@ -31,6 +34,7 @@ COPY --chown=user . /app
 RUN ls -la /app
 
 RUN uv sync
+RUN . .venv/bin/activate
 
 # `7860` is the default port for Hugging Face Spaces running on Docker
 # https://huggingface.co/docs/hub/en/spaces-config-reference

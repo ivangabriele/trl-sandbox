@@ -7,7 +7,9 @@ dependencies = [
     "accelerate>=1.7.0",
     "datasets>=3.6.0",
     "deepspeed>=0.17.1",
+    "huggingface[cli]>=0.0.1",
     "peft>=0.15.2",
+    "torch>=2.7.1",
     "transformers>=4.52.4",
 ]
 
