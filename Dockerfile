@@ -1,4 +1,4 @@
-https://huggingface.co/docs/hub/en/spaces-sdks-docker-first-demo#create-the-dockerfile
+# https://huggingface.co/docs/hub/en/spaces-sdks-docker-first-demo#create-the-dockerfile
 
 FROM nvidia/cuda:12.9.0-cudnn-runtime-ubuntu24.04
 
