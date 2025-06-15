@@ -1,6 +1,6 @@
 https://huggingface.co/docs/hub/en/spaces-sdks-docker-first-demo#create-the-dockerfile
 
-FROM python:3.13-bookworm
+FROM nvidia/cuda:12.9.0-cudnn-runtime-ubuntu24.04
 
 ENV RUNNING_IN_DOCKER true
 
@@ -26,7 +26,6 @@ RUN chmod 755 /app
 USER user
 ENV PATH="/home/user/.local/bin:$PATH"
 RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/v1.2.1/zsh-in-docker.sh)"
-RUN curl -fsSL https://pyenv.run | bash
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 
 COPY --chown=user . /app
@@ -34,6 +33,7 @@ COPY --chown=user . /app
 RUN ls -la /app
 
 ENV UV_NO_CACHE="1"
+RUN uv venv
 RUN uv sync
 
 SHELL ["/usr/bin/bash", "-c"]
