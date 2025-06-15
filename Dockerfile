@@ -22,7 +22,7 @@ RUN chown ubuntu /app
 RUN chmod 755 /app
 
 USER ubuntu
-# ENV PATH="/home/user/.local/bin:$PATH"
+ENV PATH="/home/ubuntu/.local/bin:$PATH"
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 
 COPY --chown=ubuntu . /app
