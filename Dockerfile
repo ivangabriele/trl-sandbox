@@ -18,15 +18,14 @@ RUN apt-get install -y \
 RUN rm -fr /var/lib/apt/lists/*
 
 WORKDIR /app
-RUN chown 1000:1000 /app
+RUN chown ubuntu /app
 RUN chmod 755 /app
 
-USER 1000
+USER ubuntu
 # ENV PATH="/home/user/.local/bin:$PATH"
-RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/v1.2.1/zsh-in-docker.sh)"
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 
-COPY --chown=1000:1000 . /app
+COPY --chown=ubuntu . /app
 
 RUN ls -la /app
 
