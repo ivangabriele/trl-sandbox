@@ -30,6 +30,7 @@ COPY --chown=user . /app
 
 RUN ls -la /app
 
+ENV UV_NO_CACHE="1"
 RUN uv sync
 RUN . .venv/bin/activate
 
