@@ -12,6 +12,7 @@ RUN apt-get install -y \
   git-lfs \
   htop \
   procps \
+  python-is-python3 \
   python3 \
   nano \
   vim \
