@@ -1,6 +1,6 @@
 # https://huggingface.co/docs/hub/en/spaces-sdks-docker-first-demo#create-the-dockerfile
 
-FROM nvidia/cuda:12.9.0-cudnn-runtime-ubuntu24.04
+FROM nvidia/cuda:12.9.0-cudnn-devel-ubuntu24.04
 
 ENV RUNNING_IN_DOCKER=true
 
@@ -34,6 +34,8 @@ RUN uv venv
 RUN uv sync
 
 SHELL ["/usr/bin/bash", "-c"]
+
+# ENV CUDA_HOME="/usr/local/cuda"
 
 RUN source .venv/bin/activate
 
