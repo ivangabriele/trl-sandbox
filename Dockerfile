@@ -24,7 +24,7 @@ RUN chown ubuntu /app
 RUN chmod 755 /app
 
 USER ubuntu
-ENV PATH="/home/ubuntu/.local/bin:$PATH"
+ENV PATH="/home/ubuntu/.local/bin:${PATH}"
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 
 COPY --chown=ubuntu . /app
@@ -35,7 +35,8 @@ RUN uv sync
 
 SHELL ["/usr/bin/bash", "-c"]
 
-# ENV CUDA_HOME="/usr/local/cuda"
+ENV CUDA_HOME="/usr/local/cuda"
+ENV PATH="${CUDA_HOME}/bin:${PATH}"
 
 RUN source .venv/bin/activate
 
