@@ -1,10 +1,10 @@
 ---
-title: TRL Example
-emoji: 🚀
-colorFrom: yellow
-colorTo: green
+title: TRL Playground
+emoji: 🧪
+colorFrom: gray
+colorTo: gray
 sdk: docker
 pinned: false
 ---
 
-# TRL Example
+# TRL Playground

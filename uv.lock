@@ -963,7 +963,7 @@ wheels = [
 ]
 
 [[package]]
-name = "trl-example"
+name = "trl-sandbox"
 version = "0.0.0"
 source = { virtual = "." }
 dependencies = [
