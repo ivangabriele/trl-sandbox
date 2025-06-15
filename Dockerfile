@@ -35,6 +35,8 @@ RUN uv sync
 
 SHELL ["/usr/bin/bash", "-c"]
 
+RUN source .venv/bin/activate
+
 # `7860` is the default port for Hugging Face Spaces running on Docker
 # https://huggingface.co/docs/hub/en/spaces-config-reference
 CMD ["python", "-m", "http.server", "--directory", "public", "7860"]
