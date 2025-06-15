@@ -28,8 +28,6 @@ RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 
 COPY --chown=ubuntu . /app
 
-RUN ls -la /app
-
 ENV UV_NO_CACHE=true
 RUN uv venv
 RUN uv sync
