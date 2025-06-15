@@ -1,6 +1,8 @@
-# https://huggingface.co/docs/hub/spaces-dev-mode#docker-spaces
+https://huggingface.co/docs/hub/en/spaces-sdks-docker-first-demo#create-the-dockerfile
 
 FROM python:3.13-bookworm
+
+ENV RUNNING_IN_DOCKER true
 
 RUN apt-get update
 RUN apt-get install -y \
@@ -12,7 +14,8 @@ RUN apt-get install -y \
   procps \
   nano \
   vim \
-  wget
+  wget \
+  zsh
 RUN rm -fr /var/lib/apt/lists/*
 
 RUN useradd -m -u 1000 user
@@ -23,6 +26,7 @@ RUN chmod 755 /app
 
 USER user
 ENV PATH="/home/user/.local/bin:$PATH"
+RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/v1.2.1/zsh-in-docker.sh)"
 RUN curl -fsSL https://pyenv.run | bash
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 
