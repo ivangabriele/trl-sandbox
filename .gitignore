@@ -176,3 +176,6 @@ pyrightconfig.json
 # Custom
 
 /models/
+
+# Logs
+/*.txt
