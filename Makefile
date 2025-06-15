@@ -30,10 +30,6 @@ test_examples:
 
 # ------------------------------------------------------------------------------
 
-activate:
-	@echo "Activating Python virtual environment..."
-	source .venv/bin/activate
-
 run_rm_1:
 	python examples/scripts/reward_modeling.py \
 		--model_name_or_path Qwen/Qwen2-0.5B-Instruct \
