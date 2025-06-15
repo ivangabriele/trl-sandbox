@@ -62,7 +62,7 @@ run_rm_2:
 		--lora_alpha 16
 
 run_ppo_1:
-	python -i examples/scripts/ppo/ppo.py \
+	python examples/scripts/ppo/ppo.py \
 		--dataset_name trl-internal-testing/descriptiveness-sentiment-trl-style \
 		--dataset_train_split descriptiveness \
 		--learning_rate 3e-6 \
