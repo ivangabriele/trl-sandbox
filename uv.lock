@@ -1072,7 +1072,7 @@ wheels = [
 ]
 
 [[package]]
-name = "trl"
+name = "trl-example"
 version = "0.0.0"
 source = { virtual = "." }
 dependencies = [

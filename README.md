@@ -1,5 +1,5 @@
 ---
-title: Trl Example
+title: TRL Example
 emoji: 🚀
 colorFrom: yellow
 colorTo: green

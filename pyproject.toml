@@ -1,16 +1,16 @@
 [project]
-name = "trl"
+name = "trl-example"
 version = "0.0.0"
 requires-python = ">=3.13"
 
 dependencies = [
-    "accelerate>=1.7.0",
-    "datasets>=3.6.0",
-    "deepspeed>=0.17.1",
-    "huggingface[cli]>=0.0.1",
-    "peft>=0.15.2",
-    "torch>=2.7.1",
-    "transformers>=4.52.4",
+  "accelerate>=1.7.0",
+  "datasets>=3.6.0",
+  "deepspeed>=0.17.1",
+  "huggingface[cli]>=0.0.1",
+  "peft>=0.15.2",
+  "torch>=2.7.1",
+  "transformers>=4.52.4",
 ]
 
 [tool.ruff]
@@ -19,10 +19,10 @@ line-length = 119
 
 [tool.ruff.lint]
 ignore = [
-    "B028", # warning without explicit stacklevel
-    "C408", # dict() calls (stylistic)
-    "C901", # function complexity
-    "E501",
+  "B028", # warning without explicit stacklevel
+  "C408", # dict() calls (stylistic)
+  "C901", # function complexity
+  "E501",
 ]
 extend-select = ["E", "F", "I", "W", "UP", "B", "T", "C"]
 
@@ -39,6 +39,6 @@ known-first-party = ["trl"]
 
 [tool.pytest.ini_options]
 markers = [
-    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
-    "low-priority: marks tests as low priority (deselect with '-m \"not low-priority\"')",
+  "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+  "low-priority: marks tests as low priority (deselect with '-m \"not low-priority\"')",
 ]
